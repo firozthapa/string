@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 2</title>
+    <label for="word">Input word:</label><br>
+    <input type="text" id="word" name="word" placeholder="hello">
+    <input type="button" value="ok" onclick="print_n_time()">
+    <p id="results"></p>
+
+
+    <script>
+        function print_n_time(){
+            var string =document.getElementById("word").value;
+            const vowels  = ["a","e","i","o","u","y","å","ä","ö","A","E","I","O","U","Y","Ä","Ö","Ä","Å"];
+            var count=0;
+            
+            for (var charset in string){
+                for (var char in vowels){
+                    if (string[charset]==vowels[char]){
+                        count=count+1;
+
+                }
+
+                 }
+
+            }
+            
+            document.getElementById("results").innerHTML=(string+" contains "+count+" vowels.")
+
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
